@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soundboard 1 à 50</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="title-group">
+        <h1>🔊 Soundboard <span>1 – 50</span></h1>
+        <p class="subtitle">Cliquez sur un nombre pour écouter sa prononciation (.wav)</p>
+      </div>
+
+      <div class="controls-bar">
+        <div class="now-playing" id="nowPlaying" aria-live="polite">
+          <span class="dot"></span>
+          <span id="nowPlayingText">Prêt</span>
+        </div>
+
+        <label class="volume-control" for="volumeSlider">
+          <span id="volumeIcon">🔉</span>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1" />
+        </label>
+
+        <button type="button" class="action-btn" id="randomBtn" title="Jouer un nombre au hasard">
+          🎲 Aléatoire
+        </button>
+        <button type="button" class="action-btn danger" id="stopBtn" title="Arrêter le son en cours">
+          ⏹ Stop
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="soundboard-grid" id="soundboardGrid" role="group" aria-label="Nombres de 1 à 50">
+        <!-- Généré dynamiquement par script.js -->
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>Application Vanilla HTML / CSS / JS — 50 fichiers <code>.wav</code> pré-générés dans <code>./sounds/</code></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
